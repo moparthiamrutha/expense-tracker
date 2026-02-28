@@ -1,4 +1,4 @@
-import { CommonModule, DatePipe, NgIf } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, effect, inject, Inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,7 +23,6 @@ import { ManageExpenseData } from '../../interfaces/manage-expense-data';
   imports: [
     MatDialogModule,
     FormsModule,
-    NgIf,
     MatFormFieldModule,
     MatSelectModule,
     MatDatepickerModule,

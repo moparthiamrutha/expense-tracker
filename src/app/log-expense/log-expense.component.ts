@@ -1,4 +1,3 @@
-import { NgForOf, NgIf } from '@angular/common';
 import { Component, effect, inject, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,14 +23,12 @@ import { defaultExpenseCategories, defaultExpenseTypes } from '../shared/constan
   imports: [
     MatIcon,
     FormsModule,
-    NgIf,
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
     MatDatepickerModule,
     MatInput,
-    NgForOf,
   ],
   providers: [provideNativeDateAdapter()],
   styleUrls: ['./log-expense.component.scss'],

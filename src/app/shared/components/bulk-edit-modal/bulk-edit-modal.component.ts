@@ -1,4 +1,4 @@
-import { CurrencyPipe, DatePipe, NgForOf, NgIf } from '@angular/common';
+import { CurrencyPipe, DatePipe } from '@angular/common';
 import { Component, effect, inject, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,8 +20,6 @@ import { BulkEditDialogData } from '../../../dashboard/interfaces/bulk-edit-dial
     ReactiveFormsModule,
     MatFormFieldModule,
     MatSelectModule,
-    NgIf,
-    NgForOf,
     MatTableModule,
     DatePipe,
     CurrencyPipe,

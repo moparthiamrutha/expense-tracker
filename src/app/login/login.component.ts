@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { NgIf } from '@angular/common';
+
 import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
@@ -26,7 +26,6 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     FormsModule,
     MatFormField,
     MatLabel,
-    NgIf,
     MatInput,
     MatProgressSpinner,
     ReactiveFormsModule,

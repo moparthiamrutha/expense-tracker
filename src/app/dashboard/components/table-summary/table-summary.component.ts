@@ -1,5 +1,5 @@
 import { SelectionModel } from '@angular/cdk/collections';
-import { CurrencyPipe, DatePipe, NgClass, NgForOf } from '@angular/common';
+import { CurrencyPipe, DatePipe, NgClass } from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -54,7 +54,6 @@ import { BulkEditDialogResult } from '../../interfaces/bulk-edit-dialog-data';
     CurrencyPipe,
     MatChipListbox,
     MatChipOption,
-    NgForOf,
     ReactiveFormsModule,
     MatLabel,
     MatDivider,

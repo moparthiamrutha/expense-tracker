@@ -32,9 +32,11 @@
       <mat-label class="mb-3">Category</mat-label>
       <div class="d-flex flex-wrap mt-1 gap-2">
         <mat-chip-listbox [multiple]="true" [formControl]="selectedFilters">
-          <mat-chip-option *ngFor="let category of filterCategories()" [value]="category">
-            {{ category }}
-          </mat-chip-option>
+          @for (category of filterCategories(); track category) {
+            <mat-chip-option [value]="category">
+              {{ category }}
+            </mat-chip-option>
+          }
         </mat-chip-listbox>
       </div>
     </div>
@@ -42,9 +44,11 @@
       <mat-label class="mb-3">Source</mat-label>
       <div class="d-flex flex-wrap mt-1 gap-2">
         <mat-chip-listbox [multiple]="false" [formControl]="selectedSourceFilters">
-          <mat-chip-option *ngFor="let source of filterSources()" [value]="source">
-            {{ source }}
-          </mat-chip-option>
+          @for (source of filterSources(); track source) {
+            <mat-chip-option [value]="source">
+              {{ source }}
+            </mat-chip-option>
+          }
         </mat-chip-listbox>
       </div>
     </div>

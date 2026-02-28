@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { Component, computed, EventEmitter, Input, Output, signal, Signal, WritableSignal } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,7 +17,6 @@ import { ChipOption } from '../../interfaces/chip-option';
     MatChipsModule,
     MatFormField,
     MatButtonModule,
-    NgIf,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatIcon,

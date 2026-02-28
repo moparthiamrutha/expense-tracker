@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, effect, Input, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,7 +15,6 @@ import { ImportReviewTableComponent } from '../import-review-table/import-review
   selector: 'app-file-import-review',
   standalone: true,
   imports: [
-    CommonModule,
     MatTableModule,
     MatTabsModule,
     MatSortModule,

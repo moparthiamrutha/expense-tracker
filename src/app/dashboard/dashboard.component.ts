@@ -1,4 +1,4 @@
-import { CurrencyPipe, NgForOf, NgTemplateOutlet } from '@angular/common';
+import { CurrencyPipe, NgTemplateOutlet } from '@angular/common';
 import { Component, effect, inject, OnDestroy, OnInit, signal, WritableSignal } from '@angular/core';
 import { SnapshotAction } from '@angular/fire/compat/database';
 import { FormsModule } from '@angular/forms';
@@ -49,7 +49,6 @@ import { ExpenseSummary } from './interfaces/expense-summary';
     MatButtonToggle,
     MatFabButton,
     RouterModule,
-    NgForOf,
     NgTemplateOutlet,
   ],
   templateUrl: './dashboard.component.html',

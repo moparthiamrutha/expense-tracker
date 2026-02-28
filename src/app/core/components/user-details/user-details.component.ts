@@ -1,4 +1,4 @@
-import { DatePipe, NgIf, UpperCasePipe } from '@angular/common';
+import { DatePipe, UpperCasePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
@@ -28,7 +28,6 @@ import { UserService } from '../../services/user.service';
     MatIcon,
     MatInput,
     MatFormFieldModule,
-    NgIf,
     ReactiveFormsModule,
     DatePipe,
     UpperCasePipe,
