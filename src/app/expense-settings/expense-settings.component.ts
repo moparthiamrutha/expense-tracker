@@ -9,11 +9,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatStepperModule } from '@angular/material/stepper';
 import { RouterLink } from '@angular/router';
 import { cloneDeep, includes } from 'lodash';
-import { UserDataRecord } from '../core/interfaces/user-data-record';
-import { DatabaseService } from '../core/services/database.service';
-import { ExpenseDataService } from '../core/services/expense-data.service';
-import { UserService } from '../core/services/user.service';
-import { defaultExpenseCategories, defaultExpenseTypes } from '../shared/constants/expense-constants';
+import { UserDataRecord } from '@core/interfaces/user-data-record';
+import { DatabaseService } from '@core/services/database.service';
+import { ExpenseDataService } from '@core/services/expense-data.service';
+import { UserService } from '@core/services/user.service';
+import { defaultExpenseCategories, defaultExpenseTypes } from '@shared/constants/expense-constants';
 import { ManageOptionsComponent } from './components/manage-options/manage-options.component';
 import { ChipOption } from './interfaces/chip-option';
 

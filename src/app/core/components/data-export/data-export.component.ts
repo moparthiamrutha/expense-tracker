@@ -26,6 +26,7 @@ export class DataExportComponent {
 
     const csv = this.papa.unparse({
       fields: this.getHeaders(),
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       data: this.formatDataForExport(this.data),
     });
 
@@ -38,6 +39,7 @@ export class DataExportComponent {
     return ['Name', 'Amount', 'Date', 'Category', 'Type', 'Comments'];
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private formatDataForExport(data: Expense[]): any[] {
     return data.map((expense) => {
       return {

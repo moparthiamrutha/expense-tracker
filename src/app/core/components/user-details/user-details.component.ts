@@ -44,6 +44,7 @@ export class UserDetailsComponent {
   abbreviatedDisplay = this.userService.abbreviatedDisplay();
   userNameForm: FormGroup = new FormGroup({
     firstName: new FormControl(this.userService.userDetails()?.firstName, [
+      // eslint-disable-next-line @typescript-eslint/unbound-method
       Validators.required,
       Validators.minLength(2),
     ]),

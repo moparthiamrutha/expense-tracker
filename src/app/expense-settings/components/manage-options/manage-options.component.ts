@@ -60,7 +60,9 @@ export class ManageOptionsComponent {
     }
     const matchingCategory = find(
       this.options(),
-      (c) => c.value.trim() === valueTrimmed || c.value.trim().toLowerCase() === valueTrimmed.toLowerCase(),
+      (chipOption) =>
+        chipOption.value.trim() === valueTrimmed ||
+        chipOption.value.trim().toLowerCase() === valueTrimmed.toLowerCase(),
     );
     if (!matchingCategory) {
       this.options.update((categories: ChipOption[]) => {

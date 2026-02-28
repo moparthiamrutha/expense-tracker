@@ -18,7 +18,7 @@ export class WindowService {
     if (this.isBrowser) {
       // Run outside NgZone to avoid triggering unnecessary change detection
       this.ngZone.runOutsideAngular(() => {
-        window.dispatchEvent(new Event('resize'));
+        this.window.window.dispatchEvent(new Event('resize'));
       });
     }
   }
