@@ -1,4 +1,4 @@
-import { NgClass, NgIf } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatCard, MatCardContent } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
@@ -7,7 +7,7 @@ import { ExpenseSummary } from '../../interfaces/expense-summary';
 @Component({
   selector: 'app-number-cards',
   templateUrl: './number-cards.component.html',
-  imports: [MatCardContent, MatIcon, NgClass, MatCard, NgIf],
+  imports: [MatCardContent, MatIcon, NgClass, MatCard],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./number-cards.component.scss'],
 })

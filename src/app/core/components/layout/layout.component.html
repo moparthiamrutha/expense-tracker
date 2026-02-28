@@ -11,13 +11,17 @@
       <mat-toolbar class="sidenav-toolbar pe-1">
         @if (!isCompactMenuEnabled()) {
           {{ isHandset() ? 'Menu' : 'Expense Tracker' }}
-          <button mat-icon-button *ngIf="!isHandset()" (click)="toggleIconsOnly()">
-            <mat-icon class="ms-2">menu_open</mat-icon>
-          </button>
+          @if (!isHandset()) {
+            <button mat-icon-button (click)="toggleIconsOnly()">
+              <mat-icon class="ms-2">menu_open</mat-icon>
+            </button>
+          }
         } @else {
-          <button mat-icon-button *ngIf="!isHandset()" (click)="toggleIconsOnly()">
-            <mat-icon>read_more</mat-icon>
-          </button>
+          @if (!isHandset()) {
+            <button mat-icon-button (click)="toggleIconsOnly()">
+              <mat-icon>read_more</mat-icon>
+            </button>
+          }
         }
       </mat-toolbar>
 

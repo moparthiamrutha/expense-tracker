@@ -16,9 +16,9 @@
               #name="ngModel"
               required
               minlength="4" />
-            <mat-error *ngIf="name.errors && (name.dirty || name.touched)">
-              Name is required (minimum 4 characters).
-            </mat-error>
+            @if (name.errors && (name.dirty || name.touched)) {
+              <mat-error> Name is required (minimum 4 characters). </mat-error>
+            }
           </mat-form-field>
         </div>
         <div class="col-12">
@@ -34,9 +34,9 @@
               (blur)="formatAmount()"
               #amount="ngModel"
               required />
-            <mat-error *ngIf="amount.errors && (amount.dirty || amount.touched)">
-              Amount is required (positive amount, max 2 decimal places).
-            </mat-error>
+            @if (amount.errors && (amount.dirty || amount.touched)) {
+              <mat-error> Amount is required (positive amount, max 2 decimal places). </mat-error>
+            }
           </mat-form-field>
         </div>
       </div>
@@ -55,7 +55,9 @@
                 required />
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker touchUi #picker></mat-datepicker>
-              <mat-error *ngIf="date.errors"> Date is required.</mat-error>
+              @if (date.errors) {
+                <mat-error> Date is required.</mat-error>
+              }
             </mat-form-field>
           </div>
         </div>
@@ -65,13 +67,15 @@
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Expense category</mat-label>
             <mat-select [(ngModel)]="expense.category" name="category" #category="ngModel" required>
-              <mat-option *ngFor="let category of categories" [value]="category">
-                {{ category }}
-              </mat-option>
+              @for (category of categories; track category) {
+                <mat-option [value]="category">
+                  {{ category }}
+                </mat-option>
+              }
             </mat-select>
-            <mat-error *ngIf="category.errors && (category.dirty || category.touched)">
-              Category is required.
-            </mat-error>
+            @if (category.errors && (category.dirty || category.touched)) {
+              <mat-error> Category is required. </mat-error>
+            }
           </mat-form-field>
         </div>
       </div>
@@ -80,11 +84,15 @@
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Payment type</mat-label>
             <mat-select [(ngModel)]="expense.type" name="payment" #payment="ngModel" required>
-              <mat-option *ngFor="let type of types" [value]="type">
-                {{ type }}
-              </mat-option>
+              @for (type of types; track type) {
+                <mat-option [value]="type">
+                  {{ type }}
+                </mat-option>
+              }
             </mat-select>
-            <mat-error *ngIf="payment.errors && (payment.dirty || payment.touched)"> Payment is required.</mat-error>
+            @if (payment.errors && (payment.dirty || payment.touched)) {
+              <mat-error> Payment is required.</mat-error>
+            }
           </mat-form-field>
         </div>
       </div>

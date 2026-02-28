@@ -3,9 +3,11 @@
 
   @if (shouldShowDashboard) {
     <div class="row">
-      <div *ngFor="let item of metrics" class="col-lg-3 col-sm-12 mb-5">
-        <app-number-cards [data]="item"></app-number-cards>
-      </div>
+      @for (item of metrics; track item) {
+        <div class="col-lg-3 col-sm-12 mb-5">
+          <app-number-cards [data]="item"></app-number-cards>
+        </div>
+      }
     </div>
     <div class="row">
       <div class="mb-5 col-lg-6 col-12">

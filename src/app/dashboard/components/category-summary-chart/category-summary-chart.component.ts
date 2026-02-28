@@ -131,10 +131,10 @@ export class CategorySummaryChartComponent implements OnInit, OnChanges {
     for (const category of this.categories) {
       const categorySumByMonth = monthNames.map(() => 0);
       const matchingExpenses = this.data.filter((c) => c.category === category);
-      matchingExpenses.forEach((e) => {
-        const expenseDate = new Date(e.date);
+      matchingExpenses.forEach((expense) => {
+        const expenseDate = new Date(expense.date);
         if (expenseDate.getFullYear() === this.date.getFullYear()) {
-          categorySumByMonth[expenseDate.getMonth()] = categorySumByMonth[expenseDate.getMonth()] + +e.amount;
+          categorySumByMonth[expenseDate.getMonth()] = categorySumByMonth[expenseDate.getMonth()] + +expense.amount;
         }
       });
       const dataObj = { name: category, data: categorySumByMonth };

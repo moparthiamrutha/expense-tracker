@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { Component, Input, WritableSignal } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { FormsModule } from '@angular/forms';
@@ -18,7 +17,7 @@ import { defaultExpenseCategories } from '../../shared/constants/expense-constan
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  imports: [NgIf, FormsModule, MatFormFieldModule, MatButton, MatProgressSpinner, MatError, MatInput, MatIcon],
+  imports: [FormsModule, MatFormFieldModule, MatButton, MatProgressSpinner, MatError, MatInput, MatIcon],
   styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent {

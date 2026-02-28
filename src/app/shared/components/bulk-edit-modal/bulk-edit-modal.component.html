@@ -10,21 +10,29 @@
         <mat-form-field appearance="outline" class="full-width mt-2">
           <mat-label>Category</mat-label>
           <mat-select formControlName="category">
-            <mat-option *ngFor="let category of categories" [value]="category">
-              {{ category }}
-            </mat-option>
+            @for (category of categories; track category) {
+              <mat-option [value]="category">
+                {{ category }}
+              </mat-option>
+            }
           </mat-select>
-          <mat-error *ngIf="editForm.get('category')?.errors?.['required']"> Category is required</mat-error>
+          @if (editForm.get('category')?.errors?.['required']) {
+            <mat-error> Category is required</mat-error>
+          }
         </mat-form-field>
       } @else {
         <mat-form-field appearance="outline" class="full-width mt-2">
           <mat-label>Payment Type</mat-label>
           <mat-select formControlName="type">
-            <mat-option *ngFor="let type of paymentTypes" [value]="type">
-              {{ type }}
-            </mat-option>
+            @for (type of paymentTypes; track type) {
+              <mat-option [value]="type">
+                {{ type }}
+              </mat-option>
+            }
           </mat-select>
-          <mat-error *ngIf="editForm.get('type')?.errors?.['required']"> Payment type is required</mat-error>
+          @if (editForm.get('type')?.errors?.['required']) {
+            <mat-error> Payment type is required</mat-error>
+          }
         </mat-form-field>
       }
     </form>

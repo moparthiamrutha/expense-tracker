@@ -4,7 +4,7 @@
     <mat-card-subtitle class="fw-lighter my-2">{{ subtitle }}</mat-card-subtitle>
   </mat-card-header>
 
-  <ng-container *ngIf="!isLoadingData(); else loadingSpinner">
+  @if (!isLoadingData()) {
     <mat-card-header></mat-card-header>
     <mat-card-content>
       <mat-form-field appearance="outline" class="full-width">
@@ -36,11 +36,9 @@
         </button>
       </div>
     </mat-card-actions>
-  </ng-container>
+  } @else {
+    <mat-card-content>
+      <app-card-spinner></app-card-spinner>
+    </mat-card-content>
+  }
 </mat-card>
-
-<ng-template #loadingSpinner>
-  <mat-card-content>
-    <app-card-spinner></app-card-spinner>
-  </mat-card-content>
-</ng-template>

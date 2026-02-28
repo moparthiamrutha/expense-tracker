@@ -76,12 +76,6 @@ export class DatabaseService {
     });
   }
 
-  addExpense(userId: string, expense: Expense): firebase.database.ThenableReference {
-    return runInInjectionContext(this.injectionContext, () => {
-      return this.db.list('users/' + userId + '/expenses').push(expense);
-    });
-  }
-
   batchUpdateExpenses(updates: Record<string, Expense> | Record<string, null>): Promise<void> {
     return runInInjectionContext(this.injectionContext, () => {
       return this.db.database.ref().update(updates);

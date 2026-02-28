@@ -31,16 +31,18 @@
       <mat-label>First Name</mat-label>
       <input matInput name="firstName" type="text" formControlName="firstName" />
       <mat-icon matPrefix>person</mat-icon>
-      <mat-error *ngIf="userNameForm.get('firstName')?.errors">
-        First Name is required (minimum 2 characters).
-      </mat-error>
+      @if (userNameForm.get('firstName')?.errors) {
+        <mat-error> First Name is required (minimum 2 characters). </mat-error>
+      }
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width my-2">
       <mat-label>Last Name</mat-label>
       <input matInput name="lastName" type="text" formControlName="lastName" />
       <mat-icon matPrefix>person</mat-icon>
-      <mat-error *ngIf="userNameForm.get('lastName')?.errors">Last Name is required (minimum 1 character).</mat-error>
+      @if (userNameForm.get('lastName')?.errors) {
+        <mat-error>Last Name is required (minimum 1 character).</mat-error>
+      }
     </mat-form-field>
   </form>
 </mat-dialog-content>

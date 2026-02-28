@@ -1,4 +1,4 @@
-import { NgIf, NgTemplateOutlet } from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 import { Component, DestroyRef, effect, inject, OnInit, signal, Type } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
@@ -44,7 +44,6 @@ import { UserDetailsComponent } from '../user-details/user-details.component';
     MatMenuTrigger,
     MatMenuItem,
     FooterLinksComponent,
-    NgIf,
   ],
 })
 export class LayoutComponent implements OnInit {
